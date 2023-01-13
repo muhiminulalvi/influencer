@@ -88,8 +88,13 @@ nav .nav-title {
         Main Section Style
 ==============================*/
 
+.main{
+    width: 100%;
+}
+
 /* Logo style */
-.logo-container, .featured {
+.logo-container,
+.featured {
     margin: 70px 165px;
 }
 
@@ -131,6 +136,7 @@ nav .nav-title {
 .collection img {
     border-radius: 5px;
     width: 100%;
+    margin-bottom: 16px;
 }
 
 .item-title {
@@ -174,7 +180,7 @@ nav .nav-title {
     font-weight: 700;
 }
 
-.more i{
+.more i {
     color: rgba(224, 44, 109, 0.87);
     font-size: 16px;
     font-weight: 700;
@@ -183,18 +189,24 @@ nav .nav-title {
 /* ====================================
         Featured Product Style
 =================================== */
-.featured{
+.featured {
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     gap: 96px;
     align-items: center;
 }
+
+.featured-info{
+    text-align: left;
+    width: 100%;
+}
+
 .featured-info .featured-title {
     font-size: 38px;
     font-weight: 700;
 }
 
-.featured-info p {
+.featured-info .featured-description {
     font-size: 16px;
     font-weight: 700;
     color: #6C6C6C;
@@ -215,4 +227,125 @@ nav .nav-title {
     font-size: 16px;
     font-weight: 700;
     color: #ffffff;
+}
+
+/* ====================================
+        Footer Style
+=================================== */
+.footer {
+    background-color: #0A0826;
+}
+
+.footer-details {
+    padding: 50px 590px;
+    text-align: center;
+}
+
+.footer-details .footer-title {
+    color: #FFFFFF;
+    font-size: 24px;
+    font-weight: 700;
+}
+
+.footer-details p {
+    color: #D9DBE1;
+    font-size: 14px;
+    font-weight: 700;
+    margin-top: 10px;
+    margin-bottom: 3px;
+}
+
+.footer-details ul {
+    display: flex;
+    gap: 16px;
+    margin-top: 44px;
+    margin-left: 38px;
+}
+
+.footer-details ul li {
+    list-style: none;
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.1);
+}
+
+.footer-details ul li i{
+    color: #FFFFFF;
+    padding: 8px;
+    font-size: 16px;
+}
+
+/* ====================================
+        Media Queries
+=================================== */
+@media screen and (max-width: 576px) {
+    .banner{
+        flex-direction: column-reverse;
+        justify-content: center;
+        text-align: center;
+    }
+
+    nav{
+        display: none;
+    }
+
+    .banner-info .banner-title {
+        font-size: 28px;
+    }
+
+    .banner-info .banner-description {
+        font-size: 14px;
+    }
+
+    .logo-container{
+        margin: 70px 0px;
+    }
+
+    .logo-container .logo {
+        flex-wrap: wrap;
+        padding: 36px 4px;
+    }
+
+
+
+    .collections {
+        grid-template-columns: repeat(1, 1fr);
+        grid-row-gap: 15px;
+    }
+
+    .collection-container {
+        margin: 30px 16px;
+    }
+
+    .featured {
+        flex-direction: column-reverse; 
+        margin: 40px 40px;
+    }
+
+    .featured-info{
+        text-align: center;
+    }
+
+    .featured-info .featured-title{
+        font-size: 24px;
+    }
+
+    .featured-description{
+        font-size: 14px;
+    }
+
+    .footer{
+        width: 100%;
+    }
+
+    .footer-details {
+        padding: 50px 50px;
+    }
+
+    .footer-details ul {
+        margin-top: 20px;
+        margin-left: 104px;
+    }
+    
 }
