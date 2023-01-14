@@ -1,21 +1,17 @@
-/* ============================
-        Basic Styles
-==============================*/
-
 * {
     margin: 0;
     font-family: 'Poppins', sans-serif;
     color: #3A3A3A;
 }
 
+body{
+    width: 100%; 
 
-/* ============================
-        Header Style
-==============================*/
-.header {
-    margin: 87px 120px;
 }
 
+.header {
+    margin: 5% 10%;
+}
 /* Nav Style */
 nav {
     display: flex;
@@ -28,7 +24,7 @@ nav .nav-title {
 
 .nav-menu ul {
     display: flex;
-    gap: 34px;
+    gap: 16px;
 }
 
 .nav-menu ul li {
@@ -49,8 +45,10 @@ nav .nav-title {
     display: flex;
     gap: 133px;
     align-items: center;
-    margin-top: 80px;
+    padding-top: 80px;
+    /* width: 100%; */
 }
+
 
 .banner-info .banner-title {
     font-size: 52px;
@@ -60,7 +58,7 @@ nav .nav-title {
 .banner-info .banner-description {
     font-size: 16px;
     font-weight: 600;
-    margin: 16px 0;
+    padding: 16px 0;
 }
 
 .btn-primary {
@@ -89,27 +87,27 @@ nav .nav-title {
 ==============================*/
 
 .main{
-    width: 100%;
+    /* width: 100%;  */
 }
 
-/* Logo style */
-.logo-container,
-.featured {
-    margin: 70px 165px;
+
+.logo-container {
+    margin: 3% 5%;
+}
+
+.logo-container{
+    /* width: 100%;  */
 }
 
 .logo-container .logo {
     display: flex;
     gap: 61px;
     justify-content: center;
-    padding: 36px 62px;
+    flex-wrap: wrap;
 }
 
-/* ============================
-        Collection Style
-==============================*/
 .collection-container {
-    margin: 30px 195px;
+    margin: 3% 15%;
 }
 
 .collection-title {
@@ -194,11 +192,12 @@ nav .nav-title {
     justify-content: center;
     gap: 96px;
     align-items: center;
+    margin: 4% 13%;
 }
 
 .featured-info{
     text-align: left;
-    width: 100%;
+    /* width: 100%; */
 }
 
 .featured-info .featured-title {
@@ -229,16 +228,17 @@ nav .nav-title {
     color: #ffffff;
 }
 
-/* ====================================
-        Footer Style
-=================================== */
 .footer {
     background-color: #0A0826;
 }
 
 .footer-details {
-    padding: 50px 590px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 4% 12%;
     text-align: center;
+    align-items: center;
 }
 
 .footer-details .footer-title {
@@ -255,11 +255,11 @@ nav .nav-title {
     margin-bottom: 3px;
 }
 
-.footer-details ul {
+.footer-details div ul {
     display: flex;
     gap: 16px;
-    margin-top: 44px;
-    margin-left: 38px;
+    margin-top: 20px;
+    margin-right: 38px;
 }
 
 .footer-details ul li {
@@ -279,48 +279,41 @@ nav .nav-title {
 /* ====================================
         Media Queries
 =================================== */
+
 @media screen and (max-width: 576px) {
-    .banner{
+    nav{
+        flex-direction: column;
+        align-items: center;
+        gap: 30px;
+        
+    }
+
+    .banner {
         flex-direction: column-reverse;
-        justify-content: center;
+        align-items: center;
+        padding-bottom: 30px;
+    }
+
+    .banner-info{
         text-align: center;
     }
 
-    nav{
-        display: none;
+    .banner-info .banner-title{
+        font-size: 24px;
     }
 
-    .banner-info .banner-title {
-        font-size: 28px;
+    .collection-container {
+        margin: 8% 2%;
     }
-
-    .banner-info .banner-description {
-        font-size: 14px;
-    }
-
-    .logo-container{
-        margin: 70px 0px;
-    }
-
-    .logo-container .logo {
-        flex-wrap: wrap;
-        padding: 36px 4px;
-    }
-
-
 
     .collections {
         grid-template-columns: repeat(1, 1fr);
         grid-row-gap: 15px;
     }
 
-    .collection-container {
-        margin: 30px 16px;
-    }
-
     .featured {
-        flex-direction: column-reverse; 
-        margin: 40px 40px;
+        flex-direction: column-reverse;
+        align-items: center;
     }
 
     .featured-info{
@@ -335,17 +328,63 @@ nav .nav-title {
         font-size: 14px;
     }
 
-    .footer{
-        width: 100%;
+    
+}
+
+@media screen and (min-width: 577px) and (max-width: 768px) {
+    nav{
+        flex-direction: column;
+        align-items: center;
+        gap: 30px;  
     }
 
-    .footer-details {
-        padding: 50px 50px;
+    .banner {
+        flex-direction: column-reverse;
+        align-items: center;
+        padding-bottom: 30px;
     }
 
-    .footer-details ul {
-        margin-top: 20px;
-        margin-left: 104px;
+    .banner-info{
+        text-align: center;
     }
+
+    .collection-container {
+        margin: 3% 3%;
+    }
+
+    .collections {
+        grid-template-columns: repeat(3, 1fr);
+        grid-row-gap: 15px;
+    }
+
+    .featured {
+        flex-direction: column-reverse;
+        align-items: center;
+    }
+
+    .featured-info{
+        text-align: center;
+    }
+}
+
+@media screen and (min-width: 769px) and (max-width: 992px) {
+    .header {
+        margin: 4% 3%;
+    }
+    
+    .logo-container {
+        margin: 3% 9%;
+    }
+
+    .collection-container {
+        margin: 3% 8%;
+    }
+
+    .featured {
+        align-items: center;
+        gap: 56px;
+        margin: 4% 6%;
+    }
+
     
 }
